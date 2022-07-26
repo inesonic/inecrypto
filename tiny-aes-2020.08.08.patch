@@ -1,0 +1,16 @@
+diff -urp tiny-aes-source-2020.08.08/aes.h tiny-aes-source-2020.08.08-patched/aes.h
+--- tiny-aes-source-2020.08.08/aes.h	2020-07-01 04:34:13.000000000 -0600
++++ tiny-aes-source-2020.08.08-patched/aes.h	2020-08-10 06:18:36.687493203 -0600
+@@ -23,9 +23,9 @@
+ #endif
+ 
+ 
+-#define AES128 1
++//#define AES128 1
+ //#define AES192 1
+-//#define AES256 1
++#define AES256 1
+ 
+ #define AES_BLOCKLEN 16 // Block length in bytes - AES is 128b block only
+ 
+Only in tiny-aes-source-2020.08.08-patched/: aes.h~
