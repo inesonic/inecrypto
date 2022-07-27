@@ -150,7 +150,7 @@ To install, simply run
 
    make install
 
-You can optionally also include ``-Dinecypto_TYPE=SHARED`` or
+You can optionally also include ``-Dinecrypto_TYPE=SHARED`` or
 ``-Dinecrypto_TYPE=STATIC`` to specifically build as a shared or static library
 respectively.  If not specified, cmake will build a static library.
 
