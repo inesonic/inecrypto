@@ -46,7 +46,7 @@ add_test(${PROJECT_NAME} ${PROJECT_NAME})
 
 add_dependencies(${PROJECT_NAME} inecrypto)
 
-target_include_directories(${PROJECT_NAME} PUBLIC "../incrypto/include")
+target_include_directories(${PROJECT_NAME} PUBLIC "../inecrypto/include")
 include_directories("../inecrypto/include")
 
 target_link_libraries(${PROJECT_NAME} inecrypto)

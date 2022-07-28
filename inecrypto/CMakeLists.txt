@@ -37,7 +37,7 @@ find_package(Qt5 COMPONENTS Test)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_library(${PROJECT_NAME} STATIC
+add_library(${PROJECT_NAME} ${${PROJECT_NAME}_TYPE}
             source/crypto_trng.cpp
             source/crypto_hmac.cpp
             source/crypto_helpers.cpp
