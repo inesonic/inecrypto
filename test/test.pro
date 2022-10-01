@@ -67,14 +67,6 @@ win32 {
 }
 
 ########################################################################################################################
-# Libraries
-#
-
-#include("../inecrypto.pri")
-#include("$${SOURCE_ROOT}/libraries/ineutil/ineutil.pri")
-#include("$${SOURCE_ROOT}/third_party/operating_system.pri")
-
-########################################################################################################################
 # Locate build intermediate and output products
 #
 
