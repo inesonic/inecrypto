@@ -92,34 +92,6 @@ namespace Crypto {
     }
 
 
-    AesCbcEncryptor::AesCbcEncryptor(
-            const AesCbcEncryptor::Keys& keys,
-            const std::uint8_t*          iv,
-            QIODevice*                   parent
-        ):Encryptor(
-            parent
-        ) {
-        std::memcpy(initialKeys, keys, keyLength);
-        std::memcpy(initialIV, iv, ivLength);
-
-        context = Q_NULLPTR;
-    }
-
-
-    AesCbcEncryptor::AesCbcEncryptor(
-            const AesCbcEncryptor::Keys& keys,
-            const std::uint8_t*          iv,
-            QObject*                     parent
-        ):Encryptor(
-            parent
-        ) {
-        std::memcpy(initialKeys, keys, keyLength);
-        std::memcpy(initialIV, iv, ivLength);
-
-        context = Q_NULLPTR;
-    }
-
-
     AesCbcEncryptor::~AesCbcEncryptor() {
         std::memset(initialKeys, 0, keyLength);
         std::memset(initialIV, 0, ivLength);

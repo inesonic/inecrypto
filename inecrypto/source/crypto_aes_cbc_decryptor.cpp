@@ -93,34 +93,6 @@ namespace Crypto {
     }
 
 
-    AesCbcDecryptor::AesCbcDecryptor(
-            const AesCbcDecryptor::Keys& keys,
-            const std::uint8_t*          iv,
-            QIODevice*                   parent
-        ):Decryptor(
-            parent
-        ) {
-        std::memcpy(initialKeys, keys, keyLength);
-        std::memcpy(initialIV, iv, ivLength);
-
-        context = Q_NULLPTR;
-    }
-
-
-    AesCbcDecryptor::AesCbcDecryptor(
-            const AesCbcDecryptor::Keys& keys,
-            const std::uint8_t*          iv,
-            QObject*                     parent
-        ):Decryptor(
-            parent
-        ) {
-        std::memcpy(initialKeys, keys, keyLength);
-        std::memcpy(initialIV, iv, ivLength);
-
-        context = Q_NULLPTR;
-    }
-
-
     AesCbcDecryptor::~AesCbcDecryptor() {
         std::memset(initialKeys, 0, keyLength);
         std::memset(initialIV, 0, ivLength);

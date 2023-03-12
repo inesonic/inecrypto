@@ -76,6 +76,18 @@ HEADERS += $${TINYAES}/aes.h
 SOURCES += $${TINYAES}/aes.c
 
 ########################################################################################################################
+# Operating System
+#
+
+win32 {
+    defined(SETTINGS_PRI, var) {
+        include($${SETTINGS_PRI})
+    }
+
+    LIBS += "$${WINDOWS_KIT_LIBDIR}/AdvAPI32.Lib"
+}
+
+########################################################################################################################
 # Locate build intermediate and output products
 #
 

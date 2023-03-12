@@ -118,28 +118,6 @@ namespace Crypto {
              */
             AesCbcDecryptor(const Keys& keys, const IV& iv, QObject* parent = Q_NULLPTR);
 
-            /**
-             * Constructor
-             *
-             * \param[in] keys   The default encryption keys to be used.
-             *
-             * \param[in] iv     The decryptor initialization vector.
-             *
-             * \param[in] parent Pointer to the parent object.  This device will also be used as the output device.
-             */
-            AesCbcDecryptor(const Keys& keys, const std::uint8_t* iv, QIODevice* parent);
-
-            /**
-             * Constructor
-             *
-             * \param[in] keys   The default encryption keys to be used.
-             *
-             * \param[in] iv     The decryptor initialization vector.
-             *
-             * \param[in] parent Pointer to the parent object.
-             */
-            AesCbcDecryptor(const Keys& keys, const std::uint8_t* iv, QObject* parent = Q_NULLPTR);
-
             ~AesCbcDecryptor() override;
 
             /**
